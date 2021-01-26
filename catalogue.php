@@ -28,17 +28,13 @@
 
 include_once('functions.php');
 require_once('class_catalogue.php');
-
+require_once('BDD.php');
 include_once('class_articles.php');
 //include_once('class_chaussure.php');
 
 
 
-try {
-    $bdd = new PDO('mysql:host=localhost;dbname=mydb;port=3307;', 'root', 'Ressorts999!');
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-} //Fonction pour query n°1
+//Fonction pour query n°1
 $reponse = $bdd->query('SELECT * FROM products WHERE quantity !=0 '); //On rentre les requêtes SQL, dans notre cas on veux faire apparaitre tout les articles 
 
 

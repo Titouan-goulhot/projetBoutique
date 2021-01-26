@@ -2,8 +2,7 @@
 
 include_once('catalogue.php');
 include_once('functions.php');
-
-$bdd = new PDO('mysql:host=localhost;dbname=mydb;port=3307;', 'root', 'Ressorts999!', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+include_once('BDD.php');
 
 class basket
 {

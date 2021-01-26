@@ -1,7 +1,7 @@
 <?php
 require_once('Clients.php');
 require_once('functions.php');
-
+require_once('BDD.php');
 
 class ListeClients
 {
@@ -9,7 +9,7 @@ class ListeClients
 
     public function __construct()
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=mydb;port=3307;', 'root', 'Ressorts999!', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        $bdd = new PDO('mysql:host=localhost;dbname=titouandb;', 'titouan', 'campus2021', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         $reponse = $bdd->query('SELECT * FROM customers');
 
         while ($data = $reponse->fetch()) {

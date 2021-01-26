@@ -3,8 +3,7 @@ include_once('class_catalogue.php'); // identique à include
 include_once('class_articles.php');
 include_once('functions.php');
 include_once('class_basket.php');
-
-$bdd = new PDO('mysql:host=localhost;dbname=mydb;port=3307;', 'root', 'Ressorts999!', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+require_once('BDD.php');
 
 //var_dump($_POST['qt']);
 ?>
